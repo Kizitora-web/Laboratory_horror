@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Yu Gothic', sans-serif;
+  justify-content: center;
+  align-items: flex-end;  /* 下に寄せる */
+  height: 100vh;
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 25%;
+  overflow: hidden;
+}
+
+header {
+  font-size: 60px;
+  background-color: gray;
+  text-align: center;
+  padding: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(0, 200, 255);
+}
+
+footer {
+  font-size: 30px;
+  background-color: gray;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#title {
+  position: fixed;
+  top: 61%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  background-image: url('bg/corridor_light.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: 'ComicKoinB';
+  src: url('fonts/g_comickoin_freeB.ttf')format('truetype');
+}
+
+#title_word {
+  font-family: 'ComicKoinB', sans-serif;
+  font-size: 250px;
+  color: rgb(212, 46, 46);
+  position: relative;
+  top: -250px;
+  text-shadow: 30px 30px 20px rgba(0, 0, 0, 0.8);
+}
+
+#start_button {
+  font-family: 'ComicKoinB', sans-serif;
+  font-size: 85px;
+  width: 700px;
+  background-color: black;
+  color: red;
+  padding: 30px;
+}
+
+#start_button:hover {
+  background-color: rgb(138, 1, 1);
+  color: black;
+}
+
+#choices {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  transition: all 0.5s ease;
+}
+
+#game-box {
+  position: absolute;
+  bottom: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111;
+  box-shadow: 0 0 20px red;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 90%;
+  width: 900px;
+  height: 400px;
+  text-align: center;
+}
+
+#next-indicator {
+  display: none;
+  font-size: 35px;
+  animation: blink 2.5s infinite;
+  margin-left: 8px;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {opacity: 1;}
+  25%, 75% {opacity: 0;}
+}
+
+/* スマホ用：画面幅が600px未満のとき調整 */
+@media screen and (max-width: 600px) {
+  #game-box {
+    width: 95%;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+/* タブレット用 */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  #game-box {
+    width: 80%;
+    font-size: 18px;
+  }
+}
+
+#text {
+    font-size: 45px;
+    text-align: left;
+    margin-bottom: 200px;
+    margin-top: 20px;
+}
+
+.choice {
+    font-size: 50px;
+    width: 600px;
+    text-align: center;
+    background: #222;
+    color: rgb(176, 7, 7);
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid cyan;
+    cursor: pointer;
+}
+
+.choice:hover {
+    background: #333;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>研究室</title>
+  </head>
+  <body>
+    <header><a href="index.html">キジトラのゲーム開発所</a></header>
+
+    <main>
+
+      <div id="title">
+        <h1 id="title_word">研究室</h1>
+        <button id="start_button">ゲームスタート</button>
+        <audio id="start_sound" src="sound/title_button.mp3"></audio>
+      </div>
+
+      <div id="game_screen" style="display: none;">
+        <div id="game-box">
+          <div id="text"></div>
+        </div>
+
+        <div id="choices"></div>
+
+        <audio id="sound" src="horror_sound.mp3" preload="auto"></audio>
+      </div>
+
+    </main>
+    
+    <script src="script.js"></script>
+    <script src="game_main.js"></script>
+
+    <footer>©Kizitora</footer>
+  </body>
+</html>
